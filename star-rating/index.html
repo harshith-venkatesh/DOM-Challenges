@@ -10,23 +10,22 @@
 </head>
 <body>
     <h1>Star Rating</h1>
-    <div id="star"></div>
+    <div id="star1"></div>
+    <div id="display-star1"></div>
     <div id="star2"></div>
+    <div id="display-star2"></div>
     <div id="star3"></div>
-    <div id="display-star"></div>
-    <div>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star-o"></i>
-    </div>
-
+    
+    
+    <div id="display-star3"></div>
+    
     <script src="approach2.js"></script>
     <script>
-        function getStar(value){
-            document.getElementById("display-star").innerHTML = value;
-        }
-        new Star("#star", 5, getStar);
-        new Star("#star2", 10, getStar);
-        new Star("#star3", 15, getStar);
+        [1,2,3].forEach(item =>{
+        new Star(`#star${item}`, item * 5, function(value){
+            document.getElementById(`display-star${item}`).innerHTML = value;});
+        })
+    
     </script>
 </body>
 </html>
