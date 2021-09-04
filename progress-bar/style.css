@@ -1,0 +1,52 @@
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rounded: 0.4rem;
+}
+
+body {
+    background-color: rgba(250, 249, 249, 0.877);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button,.btn {
+    padding: 0.5rem 0.75rem;
+    margin: 0.5rem 0.5rem;
+    border-radius: var(--rounded);
+}
+
+input {
+    padding: 0.5rem 0.75rem;
+    width: 20rem;
+    margin: 0.5rem;
+}
+
+.container {
+    background-color: rgb(192, 192, 192);
+    width: 200px;
+    border-radius: var(--rounded);
+    border: 1px solid black;
+    height: 50px;
+}
+
+.main-container {
+    background-color: grey;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: var(--rounded);
+}
+.progress {
+    background-color: rgb(116, 194, 92);
+    padding: 1%;
+    text-align: right;
+    font-size: 20px;
+    height: 50px;
+    border-radius: var(--rounded);
+}
