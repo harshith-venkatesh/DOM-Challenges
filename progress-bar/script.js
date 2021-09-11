@@ -9,27 +9,48 @@ function ProgressBarGenerator(element,time,index){
     this.element = element;
     this.time = time;
     this.index = index;
+    this.count = 0;
+    this.width = 0;
+    this.startTime = null;
+    this.isLoading = false;
     this.init();
 }
 
-function callProgressTimer(progressView,timeSet,totalClicks,button) {
-    let counter = 0;
-    let numberOfClicks = totalClicks;
-    console.log(numberOfClicks)
-    let id;
-    let width = 0;
-    id = setInterval(progressUpdate,timeSet); 
-    function progressUpdate(){
-        if(width>=100) {
-            clearInterval(id);
-            button.innerText = numberOfClicks > 0 ? `Run ${numberOfClicks}`:'Run'
-        } else {
-            width +=1;
-            progressView.style.width = width + '%';
-            progressView.classList.add('progress');
+ProgressBarGenerator.prototype.fill = function(button,progressView){
+    if(this.startTime === null){
+        this.startTime = Date.now();
+    }
+    const elapsedTime = Date.now() - this.startTime;
+    const width = Math.min((elapsedTime/this.time)*100,100);
+    progressView.style.width = width + '%';
+    progressView.classList.add('progress');
+
+    if(elapsedTime >=this.time){
+        this.count--;
+        progressView.style.width = 0;
+        this.startTime = null;
+        button.innerText = this.count > 0 ? `Run ${this.count}`: `Run`;
+        if(this.count<=0){
+            button.innerText = `Run`;
+            this.isLoading = false;
+            return;
         }
     }
+    
+    setTimeout(this.fill.bind(this,button,progressView),this.time/60) //60fps
 }
+
+ProgressBarGenerator.prototype.progressLoad = function(button,progressView) {
+    this.count++;
+    button.innerText = this.count > 0 ? `Run ${this.count}`: `Run`;
+    if(!this.isLoading){
+        this.isLoading = true;
+        
+        this.fill.call(this,button,progressView);
+    }
+}
+
+
 
 ProgressBarGenerator.prototype.init = function() {
     const container = document.createElement('div');
@@ -42,11 +63,9 @@ ProgressBarGenerator.prototype.init = function() {
     const button = document.createElement('button');
     button.innerText = 'Run';
     button.classList.add('btn')
-    let countButtonHomeClicks = 0;
+    
     button.addEventListener('click',(e)=> {
-        countButtonHomeClicks += 1;
-        const timeSet = this.time >10 ? this.time/100 : this.time;
-        callProgressTimer(progressView,timeSet,countButtonHomeClicks,button)
+        this.progressLoad.call(this,button,progressView);
     })
     container.appendChild(progressWrapper)
     container.appendChild(button)
@@ -55,8 +74,7 @@ ProgressBarGenerator.prototype.init = function() {
 }
 
 createProgressBar.addEventListener('click',() => {
-    const val = inputValue.value ? inputValue.value*1000 : 3000
+    const val = inputValue.value > 0 ? inputValue.value*1000 : 1000
     index += 1;
-    console.log('index')
     new ProgressBarGenerator(progressBarContainer,val,index);
 })
