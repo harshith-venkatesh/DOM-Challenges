@@ -3,3 +3,11 @@ On click of exact blue box increase the number of score and increase the number 
 Follow the design pattern
 Try to add the timer
 setTimeout, promise
+
+https://jsfiddle.net/u8xg2vep/
+https://jsfiddle.net/dikshagoyal26/xujwhok8/22/
+
+
+Sunny Code
+
+https://jsfiddle.net/devkodeio/w9j7toy4/

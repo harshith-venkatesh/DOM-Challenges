@@ -41,6 +41,7 @@ ProgressBarGenerator.prototype.fill = function(button,progressView){
 }
 
 ProgressBarGenerator.prototype.progressLoad = function(button,progressView) {
+    console.log(this)
     this.count++;
     button.innerText = this.count > 0 ? `Run ${this.count}`: `Run`;
     if(!this.isLoading){
