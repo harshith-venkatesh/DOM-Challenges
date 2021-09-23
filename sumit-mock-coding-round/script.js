@@ -1,10 +1,11 @@
 const playground = document.querySelector('#user-playground');
 const startTime = Date.now();
 let canType = true;
-const DELAY = 10;
+const DELAY = 10000;
 let wordsToDisplay = '';
 console.log('hi');
-playground.innerHTML += `Start Typing.....`;
+playground.innerHTML += `<h1>Welcome User</h1>
+\n Start Typing.....`;
 
 
 
