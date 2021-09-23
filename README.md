@@ -1,45 +1,69 @@
-The DOM Challenge
-Devkode is coming up with a weekly hackathon, #TheDOMChallenge
-It's a 60-90 minutes online weekly challenge related to frontend development consisting of industrial level machine round questions.
+# The DOM Challenge
 
-Challenge 1:
-Implement Star Rating Widget using HTML, CSS and JavaScript View
+Devkode is coming up with a weekly hackathon, **#TheDOMChallenge** <br />
+It's a 60-90 minutes online weekly challenge related to frontend development consisting of
+industrial level machine round questions.
 
-Duration: 60 Minutes
+---
 
-Solution 1: https://jsfiddle.net/devkodeio/2ovtnj8f/
+### Challenge 1:
 
-Solution 2: https://jsfiddle.net/devkodeio/dry8mczx/
+Implement Star Rating Widget using HTML, CSS and JavaScript [View](./star-rating/README.md)
 
-Challenge 2:
-Implement Pixel Art grid using HTML, CSS and JavaScript View
+**Duration:** 60 Minutes <br/>
 
-Duration: 60 Minutes
+**Solution 1:** https://jsfiddle.net/devkodeio/2ovtnj8f/
 
-Challenge 3:
-Implement chess board using HTML, CSS and Vanilla Javascript, where if you click on any of the block it should highlight its diagonals. View
+**Solution 2:** https://jsfiddle.net/devkodeio/dry8mczx/
 
-Duration: 90 Minutes
+---
 
-Challenge 4:
-Implement color spotter game using HTML, CSS and Vanilla Javascript, where you have to identify the cell that is different from the rest. View
+### Challenge 2:
 
-Duration: 90 Minutes
+Implement Pixel Art grid using HTML, CSS and JavaScript [View](./pixel-art/README.md)
 
-Challenge 5:
-Implement Progress bar using HTML, CSS and Vanilla Javascript. View
+**Duration:** 60 Minutes <br/>
 
-Duration: 90 Minutes
+---
 
-Challenge 6:
-Implement Memory Game using HTML, CSS and Vanilla Javascript. View
+### Challenge 3:
 
-Duration: 90 Minutes
+Implement chess board using HTML, CSS and Vanilla Javascript, where if you click on any of the block it should highlight its diagonals. [View](./chess-board/README.md)
 
-Challenge 7:
-Implement Day Calendar using HTML, CSS and Vanilla Javascript. View
+**Duration:** 90 Minutes <br/>
 
-Duration: 120 Minutes
+---
 
+### Challenge 4:
 
-Telegram | Instagram | Website
+Implement color spotter game using HTML, CSS and Vanilla Javascript, where you have to identify the cell that is different from the rest. [View](./color-spotter/README.md)
+
+**Duration:** 90 Minutes <br/>
+
+---
+
+### Challenge 5:
+
+Implement Progress bar using HTML, CSS and Vanilla Javascript. [View](./progress-bar/README.md)
+
+**Duration:** 90 Minutes <br/>
+
+---
+
+### Challenge 6:
+
+Implement Memory Game using HTML, CSS and Vanilla Javascript. [View](./memory-game/README.md)
+
+**Duration:** 90 Minutes <br/>
+
+---
+
+### Challenge 7:
+
+Implement Day Calendar using HTML, CSS and Vanilla Javascript. [View](./calendar/README.md)
+
+**Duration:** 120 Minutes <br/>
+
+<br />
+
+[Telegram](http://t.me/teamdevkode) | [Instagram](https://www.instagram.com/devkode.io/) | [Website](https://learn.devkode.io/)
